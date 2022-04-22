@@ -11,6 +11,7 @@ class AdminController extends Controller{
 		$data['pemilih'] = User::where('status', 'pemilih')->get()->count();
 		$data['pendaftar'] = User::where('status', 'pendaftar')->get()->count();
 		$data['user'] = User::all()->count();
+		$data['visitors'] = User::all()->count();
 		// dd($data);
 		return view('administrator.beranda', $data);
 	}

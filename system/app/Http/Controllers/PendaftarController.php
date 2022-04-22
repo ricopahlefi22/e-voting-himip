@@ -26,6 +26,7 @@ class PendaftarController extends Controller {
 		$pendaftar = new User;
         $pendaftar->nim = request('nim');
 		$pendaftar->nama = request('nama');
+		$pendaftar->kelas = request('kelas');
         $pendaftar->no_hp = request('no_hp');
 		$pendaftar->status = 'pendaftar';
 		$pendaftar->save();
@@ -42,6 +43,7 @@ class PendaftarController extends Controller {
 	function update(User $pendaftar){
         $pendaftar->nim = request('nim');
 		$pendaftar->nama = request('nama');
+		$pendaftar->kelas = request('kelas');
         $pendaftar->no_hp = request('no_hp');
 		$pendaftar->save();
 		// dd($pendaftar);
@@ -51,7 +53,7 @@ class PendaftarController extends Controller {
 
 	function verifikasi(User $pendaftar){
 		$kodeakses = Str::random(5);
-		$pendaftar->kode_akses = $kodeakses;
+		$pendaftar->password = $kodeakses;
 		$pendaftar->status = 'pemilih';
 		$pendaftar->save();
 		// dd($pendaftar);

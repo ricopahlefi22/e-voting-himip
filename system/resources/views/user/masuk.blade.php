@@ -24,7 +24,7 @@
             <div class="form-group mt-3">
                 <input type="text" class="form-control" name="password" id="password" placeholder="Kode Akses" required>
             </div>
-            <div class="text-center mt-5"><button type="submit">Mendaftar</button></div>
+            <div class="text-center mt-5"><button type="submit">Masuk</button></div>
           </form>
 
         </div>

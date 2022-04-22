@@ -5,6 +5,8 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PendaftarController;
 use App\Http\Controllers\PemilihController;
 use App\Http\Controllers\KandidatController;
+use App\Http\Controllers\UserController;
+
 
 
 /*
@@ -18,18 +20,15 @@ use App\Http\Controllers\KandidatController;
 |
 */
 
-Route::get('/', function () {
-    return view('user.beranda');
-});
 
-Route::get('/pendaftaran', function () {
-    return view('user.pendaftaran');
-});
+Route::controller(UserController::class)->group(function(){
+    Route::get('/','beranda');
+    Route::get('/pendaftaran','pendaftaran');
+    Route::post('/pendaftaran', 'store');
+    Route::get('/masuk','masuk');
+    Route::get('/pemilihan','pemilihan');
 
-Route::get('/masuk', function () {
-    return view('user.masuk');
 });
-
 
 Route::prefix('admin')->group(function(){
     Route::get('/beranda', [AdminController::class, 'beranda']);

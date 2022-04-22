@@ -26,7 +26,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="{{url('admin/pemilih')}}" class="nav-link {{checkRouteActive('admin/promotor')}}">
+            <a href="{{url('admin/pemilih')}}" class="nav-link {{checkRouteActive('admin/pemilih')}}">
               <i class="nav-icon fa fa-user" ></i>
               <p>
                 Data Pemilih

@@ -17,7 +17,8 @@
 
         <div class="col-lg-8 mt-5 mt-lg-0">
 
-          <form action="" method="post" role="form" class="php-email-form">
+          <form action="{{url('pendaftaran')}}" method="post" role="form" class="php-email-form">
+            @csrf
             <div class="row">
               <div class="col-md-6 form-group">
                 <input type="text" name="nim" class="form-control" id="nim" placeholder="Nomor Induk Mahasiswa" minlength="10" maxlength="10" required>

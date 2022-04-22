@@ -6,7 +6,7 @@
             <div class="col-md-12 mt-5">
                 <div class="card">
                     <div class="card-header">
-                        Tambah Data Promotor
+                        Tambah Data Kandidat
                     </div>
                     <div class="card-body">
                         <form action="{{ url('admin/kandidat') }}" method="post" enctype="multipart/form-data">

@@ -37,7 +37,7 @@
 											</form>	
 										</div>
 									</td>
-									<td>{{$kandidat->no_urut}}</td>
+									<td>{{$kandidat->nomor_urut}}</td>
 									<td>{{$kandidat->nama_pasangan}}</td>
 									<td><img src="{{url('public')}}/{{$kandidat->foto}}" width="100"></td>
 								</tr>

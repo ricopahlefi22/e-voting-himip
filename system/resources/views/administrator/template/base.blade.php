@@ -6,7 +6,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <link rel="shortcut icon" href="{{url('public')}}/assets-admin/img/favicon.png">
 
-  <title> Admin Page | Aplikasi Pengenalan Rambu Lalu Lintas dan Simulasi SIM C </title>
+  <title> Administrator Electronic Voting HIMIP</title>
 
   <link rel="stylesheet" href="{{url('public')}}/assets-admin/plugins/fontawesome-free/css/all.min.css">
   <link rel="stylesheet" href="{{url('public')}}/assets-admin/dist/css/adminlte.min.css">

@@ -25,6 +25,10 @@
                                 <label for="no_hp" class="control-label">Nomor Telepon</label>
                                 <input type="text" class="form-control" name="no_hp" value="{{$pendaftar->no_hp}}">
                             </div>
+							<div class="form-group">
+                                <label for="kelas" class="control-label">Kelas</label>
+                                <input type="text" class="form-control" name="kelas" value="{{$pendaftar->kelas}}">
+                            </div>
 							<button class="btn btn-dark float-right">Simpan</button>
 						</form>
 					</div>
