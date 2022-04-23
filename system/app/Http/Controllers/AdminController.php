@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 
 use App\Models\User;
+use App\Models\Kandidat;
 
 
 class AdminController extends Controller{
@@ -15,6 +16,7 @@ class AdminController extends Controller{
 		$data['pendaftar'] = User::where('status', 'pendaftar')->get()->count();
 		$data['user'] = User::all()->count();
 		$data['visitors'] = User::all()->count();
+		$data['kandidat'] = Kandidat::all();
 		// dd($data);
 		return view('administrator.beranda', $data);
 	}

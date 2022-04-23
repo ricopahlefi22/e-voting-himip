@@ -10,7 +10,11 @@ use App\Models\User;
 class UserController extends Controller {
 
 	function beranda(){
-		return view('user.beranda');
+		$data['dua'] = User::where('kelas', 'Teknik Informatika 2A')->orwhere('kelas','Teknik Informatika 2B')->count();
+		$data['empat'] = User::where('kelas', 'Teknik Informatika 4A')->orwhere('kelas','Teknik Informatika 4B')->count();
+		$data['enam'] = User::where('kelas', 'Teknik Informatika 6A')->orwhere('kelas','Teknik Informatika 6B')->count();
+		$data['sudah_memilih'] = User::where('status', 'pemilih')->whereNotNull('pilihan')->count();
+		return view('user.beranda', $data);
 	}
 
 	function pendaftaran(){
@@ -35,6 +39,10 @@ class UserController extends Controller {
 	
 	function pemilihan(){
 		$data['list_kandidat'] = Kandidat::all();
+		$data['dua'] = User::where('kelas', 'Teknik Informatika 2A')->orwhere('kelas','Teknik Informatika 2B')->count();
+		$data['empat'] = User::where('kelas', 'Teknik Informatika 4A')->orwhere('kelas','Teknik Informatika 4B')->count();
+		$data['enam'] = User::where('kelas', 'Teknik Informatika 6A')->orwhere('kelas','Teknik Informatika 6B')->count();
+		$data['sudah_memilih'] = User::where('status', 'pemilih')->whereNotNull('pilihan')->count();
 		return view('user.pemilihan', $data);
 	}
     

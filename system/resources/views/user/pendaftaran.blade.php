@@ -24,14 +24,22 @@
                 <input type="number" name="nim" class="form-control" id="nim" placeholder="Nomor Induk Mahasiswa" minlength="10" maxlength="10" required>
               </div>
               <div class="col-md-6 form-group mt-3 mt-md-0">
-                <input type="text" class="form-control" name="no_hp" id="no_hp" placeholder="Nomor Handphone (628xxxxxxxxxx)" required>
+                <input type="number" class="form-control" name="no_hp" id="no_hp" placeholder="Nomor Handphone" required>
               </div>
             </div>
             <div class="form-group mt-3">
               <input type="text" class="form-control" name="nama" id="nama" placeholder="Nama Lengkap" required>
             </div>
             <div class="form-group mt-3">
-                <input type="text" class="form-control" name="kelas" id="kelas" placeholder="Kelas (Gunakan Huruf Kapital)" required>
+              <select name="kelas" id="kelas" class="form-control">
+                <option value="" disabled selected hidden>Kelas</option>
+                <option value="Teknik Informatika 2A">Teknik Informatika 2A</option>
+                <option value="Teknik Informatika 2B">Teknik Informatika 2B</option>
+                <option value="Teknik Informatika 4A">Teknik Informatika 4A</option>
+                <option value="Teknik Informatika 4B">Teknik Informatika 4B</option>
+                <option value="Teknik Informatika 6A">Teknik Informatika 6A</option>
+                <option value="Teknik Informatika 6B">Teknik Informatika 6B</option>
+            </select>
             </div>
             <div class="text-center mt-5"><button type="submit">Mendaftar</button></div>
           </form>

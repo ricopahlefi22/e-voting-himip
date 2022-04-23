@@ -43,6 +43,5 @@
                 </div>
             @endif
         </div>
-
-    </section><!-- End Hero -->
+    </section>
 @endsection

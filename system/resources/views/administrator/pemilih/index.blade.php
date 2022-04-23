@@ -39,6 +39,7 @@
 									<th>Kode Akses</th>
 									<th>Nama</th>
 									<th>No Handphone</th>
+									<th>Kelas</th>
 									<th>Dibuat</th>
 								</tr>
 							</thead>
@@ -69,6 +70,7 @@
 									</td>
 									<td>{{$pemilih->nama}}</td>
 									<td>{{$pemilih->no_hp}}</td>
+									<td>{{$pemilih->kelas}}</td>
 									<td>{{$pemilih->created_at}}</td>
 								</tr>
 								@endforeach

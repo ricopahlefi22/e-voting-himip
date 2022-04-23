@@ -1,6 +1,6 @@
 <footer class="main-footer">
     <div class="float-right d-none d-sm-inline">
-      Sistem Pendukung Keputusan
+        Electronic Voting HIMIP
     </div>
-    <strong>Copyright &copy; 2020 <a href="{{url('/')}}">Amalia Betiar</a>.</strong> Teknik Informatika Angkatan 2019.
-  </footer>
+    <strong>Copyright &copy; HIMIP 2022. Designed by <a href="{{ url('www.instagram.com/ricopahlefi') }}">Rico Pahlefi</a>.</strong>
+</footer>

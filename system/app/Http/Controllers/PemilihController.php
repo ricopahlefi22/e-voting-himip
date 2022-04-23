@@ -27,6 +27,7 @@ class PemilihController extends Controller {
         $pemilih->nim = request('nim');
 		$pemilih->nama = request('nama');
         $pemilih->no_hp = request('no_hp');
+		$pemilih->kelas = request('kelas');
 		$pemilih->status = 'pemilih';
 		$pemilih->save();
 		// dd($pemilih);
@@ -43,6 +44,7 @@ class PemilihController extends Controller {
         $pemilih->nim = request('nim');
 		$pemilih->nama = request('nama');
         $pemilih->no_hp = request('no_hp');
+		$pemilih->kelas = request('kelas');
 		$pemilih->save();
 		// dd($pemilih);
 

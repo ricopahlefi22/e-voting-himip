@@ -10,7 +10,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="{{'public'}}/assets/img/favicon.png" rel="icon">
+  <link href="{{'public'}}/assets/img/logo-himip.png" rel="icon">
   <link href="{{'public'}}/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->

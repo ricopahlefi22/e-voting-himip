@@ -14,7 +14,7 @@
                   <div class="col-md-6 d-md-flex align-items-md-stretch">
                     <div class="count-box">
                       <i class="bi bi-emoji-smile"></i>
-                      <span data-purecounter-start="0" data-purecounter-end="65" data-purecounter-duration="2" class="purecounter"></span>
+                      <span data-purecounter-start="0" data-purecounter-end="{{$enam}}" data-purecounter-duration="2" class="purecounter"></span>
                       <p>Teknik Informatika semester <strong>6</strong></p>
                     </div>
                   </div>
@@ -22,7 +22,7 @@
                   <div class="col-md-6 d-md-flex align-items-md-stretch">
                     <div class="count-box">
                       <i class="bi bi-journal-richtext"></i>
-                      <span data-purecounter-start="0" data-purecounter-end="85" data-purecounter-duration="2" class="purecounter"></span>
+                      <span data-purecounter-start="0" data-purecounter-end="{{$empat}}" data-purecounter-duration="2" class="purecounter"></span>
                       <p>Teknik Informatika semester <strong>4</strong></p>
                     </div>
                   </div>
@@ -30,7 +30,7 @@
                   <div class="col-md-6 d-md-flex align-items-md-stretch">
                     <div class="count-box">
                       <i class="bi bi-clock"></i>
-                      <span data-purecounter-start="0" data-purecounter-end="35" data-purecounter-duration="4" class="purecounter"></span>
+                      <span data-purecounter-start="0" data-purecounter-end="{{$dua}}" data-purecounter-duration="4" class="purecounter"></span>
                       <p>Teknik Informatika semester <strong>2</strong></p>
                     </div>
                   </div>
@@ -38,8 +38,8 @@
                   <div class="col-md-6 d-md-flex align-items-md-stretch">
                     <div class="count-box">
                       <i class="bi bi-award"></i>
-                      <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="4" class="purecounter"></span>
-                      <p>Jumlah Mahasiswa <strong>Golongan Putih</strong></p>
+                      <span data-purecounter-start="0" data-purecounter-end="{{$sudah_memilih}}" data-purecounter-duration="4" class="purecounter"></span>
+                      <p>Jumlah Mahasiswa yang <strong>Sudah Memilih</strong></p>
                     </div>
                   </div>
                 </div>
