@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\PendaftarController;
 use App\Http\Controllers\PemilihController;
@@ -25,12 +26,16 @@ Route::controller(UserController::class)->group(function(){
     Route::get('/','beranda');
     Route::get('/pendaftaran','pendaftaran');
     Route::post('/pendaftaran', 'store');
-    Route::get('/masuk','masuk');
+    Route::get('/masuk','masuk')->name('login');
     Route::get('/pemilihan','pemilihan');
+    Route::put('/pilih/{user}','pilih');
+
 
 });
+Route::post('/masuk', [AuthController::class, 'loginProcess']);
+Route::get('logout', [AuthController::class, 'logout']);
 
-Route::prefix('admin')->group(function(){
+Route::prefix('admin')->middleware('auth')->group(function(){
     Route::get('/beranda', [AdminController::class, 'beranda']);
 
     Route::controller(PendaftarController::class)->group(function(){
@@ -62,6 +67,17 @@ Route::prefix('admin')->group(function(){
         Route::put('/kandidat/{kandidat}', 'update');
         Route::put('/kandidat/verifikasi/{kandidat}', 'verifikasi');
         Route::delete('/kandidat/{kandidat}', 'destroy');
+    });
+
+    Route::controller(AdminController::class)->group(function(){
+        Route::get('/admin', 'index');
+        Route::get('/admin/create', 'create');
+        Route::post('/admin', 'store');
+        Route::get('/admin/{id}', 'show');
+        Route::get('/admin/{admin}/edit', 'edit');
+        Route::put('/admin/{admin}', 'update');
+        Route::put('/admin/verifikasi/{admin}', 'verifikasi');
+        Route::delete('/admin/{admin}', 'destroy');
     });
 
 });

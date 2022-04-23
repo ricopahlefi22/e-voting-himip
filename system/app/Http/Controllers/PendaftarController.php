@@ -53,7 +53,8 @@ class PendaftarController extends Controller {
 
 	function verifikasi(User $pendaftar){
 		$kodeakses = Str::random(5);
-		$pendaftar->password = $kodeakses;
+		$pendaftar->kode_akses = $kodeakses;
+		$pendaftar->password = bcrypt($kodeakses);
 		$pendaftar->status = 'pemilih';
 		$pendaftar->save();
 		// dd($pendaftar);

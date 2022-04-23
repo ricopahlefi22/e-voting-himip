@@ -35,6 +35,7 @@
 								<tr>
 									<th>NO</th>
 									<th>Aksi</th>
+									<th>NIM</th>
 									<th>Kode Akses</th>
 									<th>Nama</th>
 									<th>No Handphone</th>
@@ -53,10 +54,11 @@
 												@method("delete")
 												<button class="btn btn-danger"><i class="fa fa-trash"></i></button>
 											</form>	
-											<a href="https://api.whatsapp.com/send?phone={{$pemilih->no_hp}}&text=Halo {{$pemilih->nama}}! Silahkan Lakukan Pemilihan Calon Ketua dan Wakil Ketua HIMIP 2022/2023 di www.xnxx.com %0A%0ANIM : {{$pemilih->nim}} %0AKode Akses : {{$pemilih->kode_akses}} " target="/blank" class="btn btn-success">WA</a>
+											<a href="https://api.whatsapp.com/send?phone=62{{$pemilih->no_hp}}&text=Halo {{$pemilih->nama}}! Silahkan Lakukan Pemilihan Calon Ketua dan Wakil Ketua HIMIP 2022/2023 di evoting-himip.com ! %0A%0ANIM : {{$pemilih->nim}} %0AKode Akses : {{$pemilih->kode_akses}} " target="/blank" class="btn btn-success">WA</a>
 
 										</div>
 									</td>
+									<td>{{$pemilih->nim}}</td>
 									<td>
 										{{$pemilih->kode_akses}}
 										{{-- <form action="{{url('admin/refresh', $pemilih->id)}}" method="post" class="form-inline" onsubmit="return confirm('Yakin akan menghapus data ini???')">

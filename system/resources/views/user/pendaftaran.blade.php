@@ -21,10 +21,10 @@
             @csrf
             <div class="row">
               <div class="col-md-6 form-group">
-                <input type="text" name="nim" class="form-control" id="nim" placeholder="Nomor Induk Mahasiswa" minlength="10" maxlength="10" required>
+                <input type="number" name="nim" class="form-control" id="nim" placeholder="Nomor Induk Mahasiswa" minlength="10" maxlength="10" required>
               </div>
               <div class="col-md-6 form-group mt-3 mt-md-0">
-                <input type="text" class="form-control" name="no_hp" id="no_hp" placeholder="Nomor Handphone " required>
+                <input type="text" class="form-control" name="no_hp" id="no_hp" placeholder="Nomor Handphone (628xxxxxxxxxx)" required>
               </div>
             </div>
             <div class="form-group mt-3">

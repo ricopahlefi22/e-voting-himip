@@ -8,9 +8,13 @@ function checkLoginRoute($route){
     ?>
 <a href="{{ url('masuk') }}" class="get-started-btn scrollto">Mulai Memilih</a>
 <?php return;
+  } else if(Route::current()->uri == 'pemilihan'){
+    ?>
+<a href="{{ url('logout') }}" class="get-started-btn scrollto">Keluar</a>
+<?php return;
   } else {
     ?>
-<a href="{{ url('masuk') }}" class="get-started-btn scrollto">Keluar</a>
+<a href="{{ url('masuk') }}" class="get-started-btn scrollto">Mulai Memilih</a>
 <?php return;
   }
 }
