@@ -52,14 +52,14 @@ function checkRouteActive($route)
                         </p>
                     </a>
                 </li>
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a href="{{ url('admin/admin') }}" class="nav-link {{ checkRouteActive('admin/admin') }}">
                         <i class="nav-icon fa fa-user"></i>
                         <p>
                             Data Administrator
                         </p>
                     </a>
-                </li>
+                </li> --}}
             </ul>
         </nav>
     </div>

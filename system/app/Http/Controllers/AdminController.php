@@ -14,9 +14,24 @@ class AdminController extends Controller{
 
 		$data['pemilih'] = User::where('status', 'pemilih')->get()->count();
 		$data['pendaftar'] = User::where('status', 'pendaftar')->get()->count();
-		$data['user'] = User::all()->count();
-		$data['visitors'] = User::all()->count();
+		$data['golput'] = User::where('status', 'pemilih')->where('pilihan', null)->get()->count();
+		$data['satu'] = User::where('pilihan', 1)->get()->count();
+		$data['dua'] = User::where('pilihan', 2)->get()->count();
+		$data['duaAsatu'] = User::where('pilihan', 1)->where('kelas', 'Teknik Informatika 2A')->get()->count();
+		$data['duaAdua'] = User::where('pilihan', 2)->where('kelas', 'Teknik Informatika 2A')->get()->count();
+		$data['duaBsatu'] = User::where('pilihan', 1)->where('kelas', 'Teknik Informatika 2B')->get()->count();
+		$data['duaBdua'] = User::where('pilihan', 2)->where('kelas', 'Teknik Informatika 2B')->get()->count();
+		$data['empatAsatu'] = User::where('pilihan', 1)->where('kelas', 'Teknik Informatika 4A')->get()->count();
+		$data['empatAdua'] = User::where('pilihan', 2)->where('kelas', 'Teknik Informatika 4A')->get()->count();
+		$data['empatBsatu'] = User::where('pilihan', 1)->where('kelas', 'Teknik Informatika 4B')->get()->count();
+		$data['empatBdua'] = User::where('pilihan', 2)->where('kelas', 'Teknik Informatika 4B')->get()->count();
+		$data['enamAsatu'] = User::where('pilihan', 1)->where('kelas', 'Teknik Informatika 6A')->get()->count();
+		$data['enamAdua'] = User::where('pilihan', 2)->where('kelas', 'Teknik Informatika 6A')->get()->count();
+		$data['enamBsatu'] = User::where('pilihan', 1)->where('kelas', 'Teknik Informatika 6B')->get()->count();
+		$data['enamBdua'] = User::where('pilihan', 2)->where('kelas', 'Teknik Informatika 6B')->get()->count();
+		$data['user'] = $data['pemilih'] + $data['pendaftar'];
 		$data['kandidat'] = Kandidat::all();
+
 		// dd($data);
 		return view('administrator.beranda', $data);
 	}
